@@ -3,15 +3,19 @@
 # Proposta de Tema de PI3
 Título:
 
-Aluno(s): Nome 1 e Nome 2 
+Aluno(s): Lucas H. Mendes e Tiago Moro
 
-Orientador: Prof. Nome
+Orientador: Prof. Saimon Miranda Fagundes
 
 # Objetivo geral
-> o objetivo geral expressa a ação que irá definir o projeto em um sentido amplo
+> Construir uma réplica miniatura da bobina de tesla para fins didáticos sobre alta tensão
 
 # Objetivos específicos
-> os objetivos específicos são as diferentes ações a serem tomadas durante o desenvolvimento visando concretizar o objetivo geral
+> Definir características construtivas da bobina de tesla; 
+> Definir circuito gerador de tensão para o primário da bobina; 
+> Simular circuito em software de simulação eletrônico; 
+> Imprimir PCB do circuito; 
+> Verificar e melhorar a segurança para o uso da bobina.
 
 # Metodologia
 > descreva a metodologia de desenvolvimento destacando quais são as etapas
