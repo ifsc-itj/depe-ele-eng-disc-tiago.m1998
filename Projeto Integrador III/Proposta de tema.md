@@ -68,9 +68,6 @@ elétrico e proteções contra curto-circuito.
 Clique [aqui](https://github.com/orgs/ifsc-itj/projects/8/views/1) para acessar o cronograma.
 
 # Lista de materiais
-> crie uma lista dos materiais que serão necessários para a execução do projeto
-> 
-> utilize preço médio do mercado mesmo que não seja necessário comprar
 
 | Item | Descrição | Unidade | Valor Unitário (Calculado) | Quantidade | Total |
 | :--- | :------------------------------------- | :---------- | :------------------------- | :---------- | :---------- |
@@ -98,6 +95,8 @@ Clique [aqui](https://github.com/orgs/ifsc-itj/projects/8/views/1) para acessar 
 
 # Unidades curriculares envolvidas
 > liste as unidades curriculares envolvidas com o tema escolhido
-- Disciplina 1;
-- Disciplina 2;
-- Disciplina n.
+- Eletromagnetismo;
+- Circuitos Elétricos;
+- Eletrônica;
+- Eletrônica de Potência;
+- Conversão eletromecânica.
