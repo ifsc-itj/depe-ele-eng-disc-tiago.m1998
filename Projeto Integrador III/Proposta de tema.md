@@ -91,7 +91,8 @@ Clique [aqui](https://github.com/orgs/ifsc-itj/projects/8/views/1) para acessar 
 | 18   | Cano PVC 75mm                          | metro       | R$ 10,00                   | 1           | R$ 10,00    |
 | 19   | Fio de cobre esmaltado 34AWG           | rolo (100g) | R$ 64,18                   | 1           | R$ 64,18    |
 | 20   | Fio de cobre esmaltado 14AWG           | rolo (100g) | R$ 65,90                   | 1           | R$ 65,90    |
-|      | Total                                  |             |                            |             | **R$ 549,99** |
+| 21   | PCB impresso                           | unidade     | R$ 131.91                  | 5           | R$ 131.91   |
+|      | Total                                  |             |                            |             | **R$ 681,90** |
 
 # Unidades curriculares envolvidas
 > liste as unidades curriculares envolvidas com o tema escolhido
