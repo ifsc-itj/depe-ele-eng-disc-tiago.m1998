@@ -72,11 +72,29 @@ Clique [aqui](https://github.com/orgs/ifsc-itj/projects/8/views/1) para acessar 
 > 
 > utilize preço médio do mercado mesmo que não seja necessário comprar
 
-| Item | Descrição | Unidade | Valor Unitário | Quantidade | Total |
-| ---- | ------------- | --- | ------------- | ------------- | ------------- |
-|  01  | Eletroduto rígido de 3/4" branco | barra | R$ 30,00 | 1 | R$ 30,00 |
-|  02  | Fita isolante | rolo de 5 m | R$ 20,00 | 5 | R$ 100,00 |
-|    |  |   |  |  | **R$ 130,00** |
+| Item | Descrição | Unidade | Valor Unitário (Calculado) | Quantidade | Total |
+| :--- | :------------------------------------- | :---------- | :------------------------- | :---------- | :---------- |
+| 01   | UCC27524                               | unidade     | R$ 5,18                    | 5           | R$ 25,91    |
+| 02   | Capacitor 25V 470uF                    | unidade     | R$ 0,80                    | 20          | R$ 15,98    |
+| 03   | KBU810                                 | peça        | R$ 2,41                    | 10          | R$ 24,10    |
+| 04   | TBLOCK 2                               | peça        | R$ 3,50                    | 5           | R$ 17,48    |
+| 05   | Interruptor ON/OFF                     | peça        | R$ 6,46                    | 2           | R$ 12,91    |
+| 06   | Capacitor Filme Metalizado 400V 0.82uF | peça        | R$ 1,34                    | 10          | R$ 13,36    |
+| 07   | Kit de capacitor monolítico            | kit         | R$ 19,25                   | 1 (180pçs)  | R$ 19,25    |
+| 08   | Potenciômetro 50k                      | peça        | R$ 3,02                    | 5           | R$ 15,09    |
+| 09   | Transformador eletrônico 220v para 12v | peça        | R$ 19,64                   | 1           | R$ 19,64    |
+| 10   | Capacitor 25v 220uF                    | peça        | R$ 0,26                    | 50          | R$ 13,11    |
+| 11   | Dissipador de calor                    | peça        | R$ 3,74                    | 10          | R$ 37,40    |
+| 12   | Kit de diodos schottky                 | kit         | R$ 19,60                   | 1 (100pçs)  | R$ 19,60    |
+| 13   | FGA60N65                               | peça        | R$ 8,16                    | 5           | R$ 40,82    |
+| 14   | NE555                                  | peça        | R$ 2,52                    | 10          | R$ 25,22    |
+| 15   | SN74HC14N                              | peça        | R$ 1,42                    | 10          | R$ 14,20    |
+| 16   | Kit resistor 1/4W                      | kit         | R$ 25,40                   | 1 (600pçs)  | R$ 25,40    |
+| 17   | Filamento PLA                          | rolo (1kg)  | R$ 110,44                  | 1           | R$ 110,44   |
+| 18   | Cano PVC 75mm                          | metro       | R$ 10,00                   | 1           | R$ 10,00    |
+| 19   | Fio de cobre esmaltado 34AWG           | rolo (100g) | R$ 64,18                   | 1           | R$ 64,18    |
+| 20   | Fio de cobre esmaltado 14AWG           | rolo (100g) | R$ 65,90                   | 1           | R$ 65,90    |
+|      |                                        |             |                            |             | **R$ 549,99** |
 
 # Unidades curriculares envolvidas
 > liste as unidades curriculares envolvidas com o tema escolhido
