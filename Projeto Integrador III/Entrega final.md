@@ -2,8 +2,6 @@
 
 ## Introdução
 
-## Introdução
-
 A bobina de Tesla, um dos inventos mais emblemáticos de Nikola Tesla, representa um marco na história da eletricidade, demonstrando a capacidade de gerar tensões elétricas altíssimas em alta frequência através de um transformador ressonante com núcleo de ar. Tradicionalmente, esses dispositivos utilizavam centelhadores (*spark gaps*) para seu acionamento, uma tecnologia robusta, porém limitada em controle e eficiência. Com o avanço da eletrônica de potência, surgiram as Bobinas de Tesla de Estado Sólido (SSTC), que substituem os componentes mecânicos por semicondutores, abrindo portas para um controle preciso e aplicações inovadoras, como a modulação de áudio.
 
 O presente trabalho detalha o processo de projeto, construção e análise de um protótipo de Bobina de Tesla de Estado Sólido, tomando como referência o projeto de código aberto "LabCoatz SSTC2.0 (Mjolnir)". A principal característica desta topologia é a utilização de um circuito auto-ressonante, que emprega o feedback do próprio campo eletromagnético da bobina para determinar a frequência de chaveamento. Essa abordagem, em teoria, promete maior eficiência e simplicidade em comparação com as topologias baseadas em osciladores de frequência fixa discutidas na literatura.
