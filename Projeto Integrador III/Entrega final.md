@@ -81,18 +81,8 @@ O trabalho de Plangklang et al. (2024) destaca que negligenciar a otimização d
 
 ---
 
-## 5.0 Síntese Comparativa e Implicações para o Projeto
 
-A análise da literatura revela que o desafio central da arquitetura proposta é a **sintonia manual da ressonância**. A tabela abaixo sintetiza as comparações.
 
-### Tabela 1: Matriz Comparativa de Trabalhos de Referência
-
-| Referência (Autor, Ano) | Topologia Principal | Circuito Oscilador | Chave de Potência | Desempenho Notável | Pontos Fortes (Relevância para o Projeto) | Pontos Fracos (Oportunidades/Desafios para o Projeto) |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Wasatonic, Ε. (2014)** | DRSSTC vs. RSGTC | Feedback / Gerador de Função | IGBT (Ponte-H) | Análise comparativa de eficácia e ruído | Justifica a escolha da tecnologia de estado sólido pela sua controlabilidade e eficiência superiores. | Foco na topologia DRSSTC, que é mais complexa que a SSTC proposta; a análise não é diretamente aplicável ao driver simples. |
-| **"Electroboom" (2015)** | SSTC Musical | Trigger de Schmitt (Não-Ressonante) | MOSFETs (Paralelo) | Modulação de áudio com PWM; operação >32V. | Análogo mais próximo; guia prático de construção e depuração; demonstração da modulação de áudio. | Instabilidade de sintonia (sem feedback), exigindo ajuste manual constante. Desafio central para o projeto. |
-| **Pranoto, H. et al. (2023)** | SSTC (Teste de Isolação) | Driver de Ponte-H | IGBTs (Ponte-H) | 150 kV @ 22 kHz. | Fornece um benchmark de desempenho para um sistema baseado em IGBT; valida o uso de IGBTs para alta tensão. | Escala industrial; frequência de operação muito baixa para uma aplicação musical; topologia de driver complexa. |
-| **Plangklang, A. et al. (2024)** | SSTC (Simulação) | N/A (Foco em geometria) | N/A | Otimização de campo elétrico via geometria do enrolamento. | Destaca a importância crítica da construção física (ângulo do primário) para o desempenho, além da eletrônica. | Requer software de simulação FEM especializado; o método não é diretamente replicável, mas o princípio sim. |
 
 ### Recomendações Finais
 
@@ -251,4 +241,12 @@ Após a validação do protótipo corrigido, o projeto pode evoluir para incorpo
 
 ## Referências
 
-[Inserir todas as referências utilizadas. Sugere-se o uso do site referenciabibliografica.net para a geração das referências. Veja o exemplo abaixo.]
+### Tabela 1: Matriz Comparativa de Trabalhos de Referência
+
+| Referência (Autor, Ano) | Topologia Principal | Circuito Oscilador | Chave de Potência | Desempenho Notável | Pontos Fortes (Relevância para o Projeto) | Pontos Fracos (Oportunidades/Desafios para o Projeto) |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Wasatonic, Ε. (2014)** | DRSSTC vs. RSGTC | Feedback / Gerador de Função | IGBT (Ponte-H) | Análise comparativa de eficácia e ruído | Justifica a escolha da tecnologia de estado sólido pela sua controlabilidade e eficiência superiores. | Foco na topologia DRSSTC, que é mais complexa que a SSTC proposta; a análise não é diretamente aplicável ao driver simples. |
+| **"Electroboom" (2015)** | SSTC Musical | Trigger de Schmitt (Não-Ressonante) | MOSFETs (Paralelo) | Modulação de áudio com PWM; operação >32V. | Análogo mais próximo; guia prático de construção e depuração; demonstração da modulação de áudio. | Instabilidade de sintonia (sem feedback), exigindo ajuste manual constante. Desafio central para o projeto. |
+| **Pranoto, H. et al. (2023)** | SSTC (Teste de Isolação) | Driver de Ponte-H | IGBTs (Ponte-H) | 150 kV @ 22 kHz. | Fornece um benchmark de desempenho para um sistema baseado em IGBT; valida o uso de IGBTs para alta tensão. | Escala industrial; frequência de operação muito baixa para uma aplicação musical; topologia de driver complexa. |
+| **Plangklang, A. et al. (2024)** | SSTC (Simulação) | N/A (Foco em geometria) | N/A | Otimização de campo elétrico via geometria do enrolamento. | Destaca a importância crítica da construção física (ângulo do primário) para o desempenho, além da eletrônica. | Requer software de simulação FEM especializado; o método não é diretamente replicável, mas o princípio sim. |
+
