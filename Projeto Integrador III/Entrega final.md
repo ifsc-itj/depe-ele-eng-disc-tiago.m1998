@@ -103,14 +103,6 @@ A análise da literatura revela que o desafio central da arquitetura proposta é
 
 ---
 
-## Referências
-
-1.  **Plangklang, A., Pattanadech, N., & Yutthagowith, P. (2024).** *Simulation and Analysis of the Optimal Electric Field from Modifications to the Winding Design for the Tesla Transformer*. Applied Sciences, 14(3), 1279.
-2.  **Wasatonic, E. (2014).** *Comparison of Tesla Coil Driver Topologies*. High Voltage Hot Dog.
-3.  **Electroboom. (2015, May 26).** *Making a Solid State Tesla Coil that Plays Music*. Electroboom.com.
-4.  **Pranoto, H. et al. (2023).** *COMPARISON OF INSULATION TESTING IN LABORATORY*. IJICIC.
-5.  **Pranoto, H. et al. (2023).** *Development of musical solid-state Tesla coil based on pulse...*.
-
 
 ## Materiais e Métodos
 
@@ -252,4 +244,8 @@ Após a validação do protótipo corrigido, o projeto pode evoluir para incorpo
 
 ## Referências
 
-[Inserir todas as referências utilizadas. Sugere-se o uso do site referenciabibliografica.net para a geração das referências. Veja o exemplo abaixo.]
+1.  **Plangklang, A., Pattanadech, N., & Yutthagowith, P. (2024).** *Simulation and Analysis of the Optimal Electric Field from Modifications to the Winding Design for the Tesla Transformer*. Applied Sciences, 14(3), 1279.
+2.  **Wasatonic, E. (2014).** *Comparison of Tesla Coil Driver Topologies*. High Voltage Hot Dog.
+3.  **Electroboom. (2015, May 26).** *Making a Solid State Tesla Coil that Plays Music*. Electroboom.com.
+4.  **Pranoto, H. et al. (2023).** *COMPARISON OF INSULATION TESTING IN LABORATORY*. IJICIC.
+5.  **Pranoto, H. et al. (2023).** *Development of musical solid-state Tesla coil based on pulse...*.
