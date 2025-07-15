@@ -249,3 +249,4 @@ Após a validação do protótipo corrigido, o projeto pode evoluir para incorpo
 3.  **Electroboom. (2015, May 26).** *Making a Solid State Tesla Coil that Plays Music*. Electroboom.com.
 4.  **Pranoto, H. et al. (2023).** *COMPARISON OF INSULATION TESTING IN LABORATORY*. IJICIC.
 5.  **Pranoto, H. et al. (2023).** *Development of musical solid-state Tesla coil based on pulse...*.
+6.   **PlasmaGlow. (2022).** Building the Ultimate Solid State Tesla Coil (MUSIC!). Instructables.
