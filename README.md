@@ -1,58 +1,29 @@
-# Página de Teste
+# Repositório de Projetos Acadêmicos
 
-## Cabeçalho da Página de Teste
-*(Esta seção representa o `<header>` do HTML)*
+<div align="center">
+  <p>Seja bem-vindo ao meu portfólio de projetos desenvolvidos durante a graduação em Engenharia Elétrica. Este espaço centraliza os relatórios, códigos e documentações dos principais trabalhos acadêmicos.</p>
+</div>
 
 ---
 
-## Seção Principal
+## 📂 Navegação dos Projetos
 
-Este é um parágrafo de texto normal. Ele serve para testar a renderização de fontes, espaçamento entre linhas e margens.
+Navegue pelos diretórios abaixo para acessar os arquivos de cada disciplina ou projeto específico.
 
-Aqui está outro parágrafo com **texto em negrito**, *texto em itálico* e um [link externo](https://www.google.com) para o Google.
+### Projetos Integradores
+* ➡️ **[Projeto Integrador I](./Projeto%20Integrador%20I/)**
+    * *Descrição breve do que foi o projeto I.*
+* ➡️ **[Projeto Integrador II](./Projeto%20Integrador%20II/)**
+    * *Descrição breve do que foi o projeto II.*
+* ➡️ **[Projeto Integrador III](./Projeto%20Integrador%20III/)**
+    * *Descrição breve do que foi o projeto III.*
 
-### Subseção com Lista
+### Trabalho de Conclusão de Curso
+* 🎓 **[TCC - Trabalho de Conclusão de Curso](./TCC/)**
+    * *Título ou tema do seu TCC.*
 
-Abaixo temos exemplos de listas:
+---
 
-* Item de lista não ordenada 1
-* Item de lista não ordenada 2
-    * Subitem 2.1
-    * Subitem 2.2
-* Item de lista não ordenada 3
-
-1.  Item de lista ordenada 1
-2.  Item de lista ordenada 2
-3.  Item de lista ordenada 3
-
-### Imagem de Exemplo
-
-Teste de carregamento e exibição de imagem:
-
-![Imagem de Exemplo Placeholder 300x150](https://via.placeholder.com/300x150)
-
-### Tabela de Dados
-
-| Coluna 1 | Coluna 2 | Coluna 3 |
-| :------- | :------- | :------- |
-| Dado A1  | Dado B1  | Dado C1  |
-| Dado A2  | Dado B2  | Dado C2  |
-| Dado A3  | Dado B3  | Dado C3  |
-
-### Formulário Simples
-
-*(Formulários HTML não são interativos em Markdown. O código HTML original é mostrado abaixo para referência.)*
-
-```html
-<form action="#" method="post">
-    <label for="nome">Nome:</label>
-    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" placeholder="Digite seu email" required>
-
-    <label for="mensagem">Mensagem:</label>
-    <textarea id="mensagem" name="mensagem" placeholder="Deixe sua mensagem"></textarea>
-
-    <input type="submit" value="Enviar Formulário">
-</form>
+<div align="center">
+  <p>Obrigado pela visita! Sinta-se à vontade para explorar os projetos.</p>
+</div>
