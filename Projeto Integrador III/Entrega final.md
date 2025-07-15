@@ -216,7 +216,7 @@ Com base nos resultados e aprendizados obtidos, são propostos os seguintes trab
 Estes são os passos essenciais para tornar o protótipo atual funcional, estável e seguro.
 
 * **Substituição do Driver de IGBTs:**
-    * **Ação:** Substituir o CI `UCC27524` pelo modelo correto especificado no projeto original, o **`UCC27425`**.
+    * **Ação:** Substituir o CI UCC27524 pelo modelo correto especificado no projeto original, o **UCC27425**.
     * **Justificativa:** Esta correção é fundamental para eliminar a defasagem de sinal (delay), garantir um chaveamento anti-fase perfeito (push-pull) no GDT e maximizar a transferência de potência para os IGBTs, resolvendo a causa raiz da ineficiência do circuito.
 
 * **Reconstrução da Bobina Secundária:**
