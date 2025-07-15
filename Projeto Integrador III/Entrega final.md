@@ -208,7 +208,46 @@ Os testes foram focados na validação sequencial do circuito de controle e na o
 Apesar dos resultados práticos limitados, os testes permitiram validar a lógica fundamental do circuito e identificar com precisão uma cadeia de falhas. O aprendizado principal aponta para a necessidade da **substituição do driver pelo modelo correto (UCC27425)** e o **reparo ou reconstrução da bobina secundária** como passos cruciais para a continuidade e sucesso do projeto.
 ### Sugestões para trabalhos futuros
 
-[Apresente suas sugestões de trabalhos futuros.]
+## 5. Sugestões de Trabalhos Futuros
+
+Com base nos resultados e aprendizados obtidos, são propostos os seguintes trabalhos futuros para a correção, melhoria e evolução do projeto.
+
+### 5.1. Correções e Melhorias Imediatas
+
+Estes são os passos essenciais para tornar o protótipo atual funcional, estável e seguro.
+
+* **Substituição do Driver de IGBTs:**
+    * **Ação:** Substituir o CI `UCC27524` pelo modelo correto especificado no projeto original, o **`UCC27425`**.
+    * **Justificativa:** Esta correção é fundamental para eliminar a defasagem de sinal (delay), garantir um chaveamento anti-fase perfeito (push-pull) no GDT e maximizar a transferência de potência para os IGBTs, resolvendo a causa raiz da ineficiência do circuito.
+
+* **Reconstrução da Bobina Secundária:**
+    * **Ação:** Construir uma nova bobina secundária, garantindo a integridade do enrolamento e a qualidade do isolamento.
+    * **Justificativa:** Uma bobina secundária íntegra, com fio contínuo e múltiplas camadas de verniz de alta isolação, é vital para evitar arcos internos (curtos-circuitos), maximizar a ressonância e a tensão de saída, e prevenir surtos de corrente que danificam o circuito de controle.
+
+* **Otimização da Placa Retificadora de Tensão:**
+    * **Ação:** Redesenhar ou aprimorar o circuito de retificação de entrada.
+    * **Melhorias Sugeridas:**
+        * **Aumentar a Capacitância:** Adicionar mais capacitores de filtro para reduzir o *ripple* da tensão DC, fornecendo uma alimentação mais estável para a ponte de IGBTs.
+        * **Implementar um Soft-Start:** Adicionar um circuito de partida suave (por exemplo, com um resistor de potência e um relé, ou um termistor NTC) para limitar a corrente de partida (*inrush current*) que carrega os capacitores, evitando que disjuntores desarmem e reduzindo o estresse sobre os diodos retificadores.
+        * **Diodos Robustos:** Utilizar diodos de ponte retificadora com maior capacidade de corrente e tensão para aumentar a margem de segurança.
+
+### 5.2. Evoluções e Aplicações Avançadas
+
+Após a validação do protótipo corrigido, o projeto pode evoluir para incorporar funcionalidades mais complexas e explorar aplicações fascinantes.
+
+* **Implementação:** Substituir o circuito interrupter baseado no 555 por uma interface que aceite uma entrada de áudio, idealmente utilizando fibra óptica para isolamento e segurança do equipamento de som (PC, celular).
+
+* **Implementação de Proteções Robustas:**
+    * **Conceito:** Adicionar circuitos de proteção ativa para evitar a queima de componentes em caso de falhas.
+    * **Implementação:** Desenvolver um circuito de **proteção contra sobrecorrente (OCD - Over-Current Detection)**. Utilizando um transformador de corrente no primário da bobina, o circuito pode desligar o sinal do interrupter instantaneamente se a corrente ultrapassar um limite seguro.
+
+* **Evolução para DRSSTC (Dual Resonant Solid State Tesla Coil):**
+    * **Conceito:** O próximo passo em performance. Adicionar um capacitor de ressonância em série com a bobina primária, criando um segundo circuito ressonante.
+    * **Benefício:** A dupla ressonância permite uma transferência de energia muito mais eficiente entre o primário e o secundário, resultando em arcos elétricos significativamente maiores e mais potentes com a mesma alimentação.
+
+* **Exploração de Transmissão de Energia Sem Fio:**
+    * **Conceito:** Utilizar o campo eletromagnético de alta frequência gerado pela bobina para alimentar dispositivos à distância.
+    * **Demonstração:** Realizar experimentos práticos como acender lâmpadas fluorescentes, incandescentes ou LEDs a metros de distância da bobina, sem qualquer conexão física, demonstrando os princípios de Nikola Tesla.
 
 ## Referências
 
