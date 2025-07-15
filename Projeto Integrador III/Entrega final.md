@@ -96,7 +96,7 @@ A análise da literatura revela que o desafio central da arquitetura proposta é
 | **Pranoto, H. et al. (2023)** | SSTC (Teste de Isolação) | Driver de Ponte-H | IGBTs (Ponte-H) | 150 kV @ 22 kHz. | Fornece um benchmark de desempenho para um sistema baseado em IGBT; valida o uso de IGBTs para alta tensão. | Escala industrial; frequência de operação muito baixa para uma aplicação musical; topologia de driver complexa. |
 | **Plangklang, A. et al. (2024)** | SSTC (Simulação) | N/A (Foco em geometria) | N/A | Otimização de campo elétrico via geometria do enrolamento. | Destaca a importância crítica da construção física (ângulo do primário) para o desempenho, além da eletrônica. | Requer software de simulação FEM especializado; o método não é diretamente replicável, mas o princípio sim. |
 
-### Recomendações Finais
+### Conclusão
 
 1.  **Metodologia de Sintonia:** Dedicar uma parte substancial dos testes à caracterização quantitativa da sensibilidade à frequência do oscilador. Recomenda-se desenvolver um procedimento de sintonia manual robusto, utilizando um potenciômetro de precisão, e documentar o desempenho em função de desvios da frequência de ressonância.
 2.  **Seleção e Acionamento de Componentes:** A escolha do IGBT deve ser refinada para um modelo *fast-switching*. O projeto do circuito de gate driver não pode ser subestimado e deve ser projetado para fornecer a corrente de pico especificada pelo fabricante para garantir comutação rápida e minimizar perdas.
@@ -106,9 +106,7 @@ A análise da literatura revela que o desafio central da arquitetura proposta é
 ---
 
 
-## Materiais e Métodos
-
-### Materiais
+## Materiais
 
 # Lista de materiais
 
