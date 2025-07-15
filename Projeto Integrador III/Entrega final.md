@@ -8,8 +8,6 @@ O presente trabalho detalha o processo de projeto, construção e análise de um
 
 Além de apresentar a metodologia de construção, este relatório documenta de forma transparente os desafios práticos enfrentados durante a implementação, desde a especificação incorreta de componentes críticos até as falhas em cascata resultantes. O objetivo é, portanto, não apenas demonstrar a viabilidade da operação do dispositivo, mas também fornecer uma análise detalhada das causas dos problemas encontrados, transformando as falhas em valiosos aprendizados de engenharia que fundamentam as recomendações para a otimização e o sucesso de trabalhos futuros.
 
-## Revisão da literatura
-
 # Revisão da Literatura: Análise Comparativa de Topologias e Implementações de Bobinas de Tesla de Estado Sólido para Aplicações Didáticas
 
 ## 1.0 Introdução: A Evolução para Topologias de Estado Sólido e a Justificativa do Projeto
