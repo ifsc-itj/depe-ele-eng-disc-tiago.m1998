@@ -3,6 +3,8 @@
   <h3>Um projeto sobre altas tensões, eletrônica de potência e a inevitável fumaça mágica.</h3>
 </div>
 
+![WhatsApp Image 2025-07-15 at 15 45 51](https://github.com/user-attachments/assets/64fe321e-3e05-499b-8fcf-7dbae68f992a)
+
 <div align="center">
   <kbd>Eletrônica de Potência</kbd>
   <kbd>SSTC</kbd>
