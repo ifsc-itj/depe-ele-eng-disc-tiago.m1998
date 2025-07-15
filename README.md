@@ -16,7 +16,7 @@ Navegue pelos diretórios abaixo para acessar os arquivos de cada disciplina ou 
 * ➡️ **[Projeto Integrador II](./Projeto%20Integrador%20II/)**
     * *Descrição breve do que foi o projeto II.*
 * ➡️ **[Projeto Integrador III](./Projeto%20Integrador%20III/)**
-    * *Descrição breve do que foi o projeto III.*
+    * Projeto, construção e análise de uma **Bobina de Tesla de Estado Sólido (SSTC)** baseada no design "Mjolnir". O trabalho documenta a implementação de um circuito auto-ressonante e a jornada de depuração de falhas.
 
 ### Trabalho de Conclusão de Curso
 * 🎓 **[TCC - Trabalho de Conclusão de Curso](./TCC/)**
