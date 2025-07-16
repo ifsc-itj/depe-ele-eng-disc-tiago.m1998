@@ -1,6 +1,6 @@
 <div align="center">
   <h1>⚡ Bobina de Tesla SSTC Auto-Ressonante ⚡</h1>
-  <h3>Um projeto sobre altas tensões, eletrônica de potência e a inevitável fumaça mágica.</h3>
+  <h3>Um projeto sobre altas tensões e eletrônica de potência.</h3>
 </div>
 
 ![WhatsApp Image 2025-07-15 at 15 45 51](https://github.com/user-attachments/assets/64fe321e-3e05-499b-8fcf-7dbae68f992a)
