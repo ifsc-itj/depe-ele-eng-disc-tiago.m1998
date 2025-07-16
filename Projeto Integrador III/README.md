@@ -88,6 +88,6 @@ A engenharia real raramente segue o plano. Nossa jornada foi uma série de diagn
 
 Toda a análise detalhada, revisão de literatura, esquemáticos e conclusões estão documentados no relatório completo do projeto.
 
-➡️ **[Acesse o Relatório Técnico Completo aqui](./Entrega%20final%20.md)**
+➡️ **[Acesse o Relatório Técnico Completo aqui](./Entrega%20final.md)**
 
 ---
