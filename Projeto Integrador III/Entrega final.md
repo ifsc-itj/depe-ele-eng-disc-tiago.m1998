@@ -108,8 +108,6 @@ A análise da literatura revela que o desafio central da arquitetura proposta é
 
 ## Materiais
 
-# Lista de materiais
-
 | Componente | Quantidade |
 | --- | --- |
 | IGBT de alta potência (FGA60N65SMD) | 2 |
@@ -146,59 +144,90 @@ A análise da literatura revela que o desafio central da arquitetura proposta é
 | Termistor de Inrush (SL32 1 ohm) | 1 |
 | Ponte retificadora (10A / 1000V) | 1 |
 
+---
+
 # Projeto Bobina de Tesla SSTC - Relatório Técnico
 
 Este documento descreve a concepção, os testes e os resultados obtidos no desenvolvimento do protótipo de uma Bobina de Tesla de Estado Sólido (SSTC), baseada no projeto de referência "LabCoatz SSTC2.0 (Mjolnir)".
 
 ## 1. Descrição do Protótipo (Placa de Controle Principal - PCB)
 
-O circuito de controle principal da SSTC foi selecionado por sua abordagem simplificada, que utiliza a própria frequência de ressonância da bobina secundária para o controle do chaveamento de potência, eliminando a necessidade de circuitos osciladores complexos.
+O circuito de controle principal da SSTC foi selecionado por sua abordagem simplificada, que utiliza a própria frequência de ressonância da bobina secundária para o controle do chaveamento de potência.
 
-![FEZ40MRKVF8V2XM](https://github.com/user-attachments/assets/f424988c-1d33-4a9b-93d5-4e360b6d7fad)
+<div align="center">
+  <figure>
+    <figcaption><b>Figura 1:</b> Placa de circuito impresso (PCB) do protótipo montada.</figcaption>
+    <img src="https://github.com/user-attachments/assets/f424988c-1d33-4a9b-93d5-4e360b6d7fad" alt="PCB do protótipo" width="700"/>
+  </figure>
+</div>
 
 O fluxo de operação do circuito é o seguinte:
 
-1.  **Captura de Sinal:** Uma antena próxima à bobina secundária capta o campo eletromagnético, que contém a frequência de ressonância natural do sistema.
-2.  **Filtragem e Condicionamento:** O sinal da antena é direcionado a um circuito integrado **74HC14 (Porta Lógica NOT com Schmitt Trigger)**. O sinal passa por duas portas inversoras em sequência. A função do Schmitt Trigger é garantir um sinal digital limpo, livre de ruídos, enquanto a dupla inversão restaura a fase original do sinal.
-3.  **Circuito de Interrupção (555 Timer):** Em paralelo, um oscilador baseado no circuito integrado **555** gera um sinal de interrupção com frequência ajustável entre 30 Hz e 100 Hz e um ciclo de trabalho (duty cycle) variável de 10% a 50%. Este sinal é enviado ao pino "Enable" do driver dos IGBTs para controlar a potência total do sistema.
-4.  **Driver de Potência (Gate Driver):** O sinal de ressonância (do 74HC14) e o sinal de interrupção (do 555) são enviados a um driver de IGBTs, responsável por fornecer a corrente necessária para acionar os transistores de potência.
-5.  **Acoplamento e Isolação (GDT):** A saída do driver alimenta um **Gate Driver Transformer (GDT)**. Este transformador isola galvanicamente o circuito de controle (baixa tensão) do circuito de potência (alta tensão), protegendo os componentes de controle.
-6.  **Chaveamento de Potência (IGBTs):** O GDT aciona os gates de dois IGBTs **FGA60N65**, que são responsáveis por chavear a alta tensão na bobina primária na frequência de ressonância.
+1.  **Captura de Sinal:** Uma antena próxima à bobina secundária capta o campo eletromagnético.
+2.  **Filtragem e Condicionamento:** O sinal é tratado por um CI **74HC14 (Schmitt Trigger)**.
+3.  **Circuito de Interrupção (555 Timer):** Um oscilador **555** gera um sinal de interrupção para controlar a potência.
+4.  **Driver de Potência (Gate Driver):** Os sinais são enviados a um driver de IGBTs.
+5.  **Acoplamento e Isolação (GDT):** Um transformador GDT isola o circuito de controle do de potência.
+6.  **Chaveamento de Potência (IGBTs):** Dois IGBTs **FGA60N65** chaveiam a alta tensão na bobina primária.
 
-<img width="2235" height="1192" alt="FYK73ALKVF8V2XO" src="https://github.com/user-attachments/assets/f0c39eea-c438-465b-9660-25d1a9400691" />
+<div align="center">
+  <figure>
+    <figcaption><b>Figura 2:</b> Diagrama esquemático completo do circuito de controle.</figcaption>
+    <img width="2235" height="1192" alt="Diagrama Esquemático" src="https://github.com/user-attachments/assets/f0c39eea-c438-465b-9660-25d1a9400691" />
+  </figure>
+</div>
 
 ## 2. Descrição dos Testes, Análise e Problemas Encontrados
 
-Os testes foram focados na validação sequencial do circuito de controle e na operação inicial da bobina em baixa potência.
+Os testes foram focados na validação sequencial do circuito e na operação inicial da bobina em baixa potência.
 
 ### 2.1. Teste de Chaveamento em Baixa Frequência
-* **Objetivo:** Validar a lógica de funcionamento do circuito de controle.
-* **Metodologia:** Utilizou-se o sinal de 60 Hz da rede elétrica, captado pelo circuito, para observar o comportamento do chaveamento em baixa frequência.
-* **Resultado e Primeiro Problema Identificado:** Durante este teste, foi detectado um erro crítico de projeto relacionado ao componente do driver.
-    * **Componente Esperado:** UCC27425 (possui uma saída normal e uma invertida).
-    * **Componente Utilizado:** UCC27524 (adquirido por engano, possui duas saídas não-invertidas).
-    * **Consequência:** A diferença de potencial nos terminais do GDT era sempre nula, impedindo o acionamento dos IGBTs.
+* **Objetivo:** Validar a lógica de funcionamento do circuito.
+* **Resultado e Primeiro Problema Identificado:** Foi detectado um erro crítico no componente do driver. O CI `UCC27524` foi usado no lugar do `UCC27425`, resultando em duas saídas em fase, o que impedia o acionamento dos IGBTs.
 
-![TEK0000](https://github.com/user-attachments/assets/b88411ab-c314-4f71-87cc-1b6a5fb81397)
-![TEK0001](https://github.com/user-attachments/assets/9357936c-9bb7-4fe2-a54b-4e049bcc59eb)
+<div align="center">
+  <figure>
+    <figcaption><b>Figura 3:</b> Sinais de saída do driver incorreto (UCC27524) medidos no osciloscópio. Ambas as saídas estão em fase.</figcaption>
+    <table>
+      <tr>
+        <td align="center">Saída do Canal 1</td>
+        <td align="center">Saída do Canal 2</td>
+      </tr>
+      <tr>
+        <td><img src="https://github.com/user-attachments/assets/b88411ab-c314-4f71-87cc-1b6a5fb81397" alt="Saída 1 do driver" width="400"></td>
+        <td><img src="https://github.com/user-attachments/assets/9357936c-9bb7-4fe2-a54b-4e049bcc59eb" alt="Saída 2 do driver" width="400"></td>
+      </tr>
+    </table>
+  </figure>
+</div>
 
 ### 2.2. Tentativa de Solução e Segundo Problema
-* **Solução Implementada:** Foi realizada uma modificação ("jumper") para alimentar uma das entradas do driver com um sinal já invertido da primeira porta do 74HC14.
-* **Resultado:** A modificação gerou com sucesso sinais invertidos na saída do driver, mas introduziu um novo problema: **Atraso de Propagação (Delay)**.
-* **Análise do Problema:** Um sinal passava por uma porta lógica (delay ~83 ns), enquanto o outro passava por duas. Essa defasagem, em alta frequência, causa "tempos mortos", perda de potência e estresse nos componentes de potência.
+* **Solução Implementada:** Foi realizada uma modificação ("jumper") para forçar a inversão de um dos sinais.
+* **Resultado:** A modificação gerou com sucesso sinais invertidos, mas introduziu um novo problema: **Atraso de Propagação (Delay)** de aproximadamente 83 ns.
 
-![TEK0002](https://github.com/user-attachments/assets/9221af4a-b3bb-411a-98b9-fda863bf625a)
-![TEK0003](https://github.com/user-attachments/assets/761d2545-719e-4b06-b55d-fa9efc7b9301)
-![TEK0004](https://github.com/user-attachments/assets/c3cc134c-a378-4274-b352-ebe4f03b43e6)
+<div align="center">
+  <figure>
+    <figcaption><b>Figura 4:</b> Medição no osciloscópio mostrando a defasagem (delay) entre os dois sinais de gate após a modificação.</figcaption>
+    <img src="https://github.com/user-attachments/assets/9221af4a-b3bb-411a-98b9-fda863bf625a" alt="Atraso de Propagação" width="600"/>
+  </figure>
+  <figure>
+    <figcaption><b>Figura 5:</b> Medições adicionais do sinal de chaveamento no osciloscópio.</figcaption>
+    <img src="https://github.com/user-attachments/assets/761d2545-719e-4b06-b55d-fa9efc7b9301" alt="Medição adicional 1" width="400"/>
+    <img src="https://github.com/user-attachments/assets/c3cc134c-a378-4274-b352-ebe4f03b43e6" alt="Medição adicional 2" width="400"/>
+  </figure>
+</div>
 
 ### 2.3. Teste de Operação em Baixa Potência e Falha dos Componentes
-* **Metodologia:** O protótipo foi testado com uma tensão de entrada reduzida (aprox. 150 Vac) apesar da defasagem de sinal.
-* **Resultado:** A bobina funcionou e gerou faíscas, validando que o conceito geral era funcional.
-* **Problemas Finais e Falha em Cascata:** Durante a operação, foi observado que a bobina secundária estava fisicamente danificada (fio rompido).
-    * **Consequências do Dano:** Os rompimentos causaram arcos internos (curtos-circuitos), levando a surtos de corrente no circuito primário e à **queima de múltiplos componentes:** 4 drivers UCC27524, 1 regulador de tensão 7812 e 3 IGBTs.
+* **Metodologia:** O protótipo foi testado com uma tensão de entrada reduzida (aprox. 150 Vac).
+* **Resultado:** A bobina funcionou e gerou faíscas.
+* **Problemas Finais e Falha em Cascata:** Foi observado que a bobina secundária estava danificada, causando curtos-circuitos internos que levaram à **queima de múltiplos componentes**.
 
-
-![WhatsApp Image 2025-07-15 at 15 46 24](https://github.com/user-attachments/assets/5386ec0f-fda0-4a60-a652-c8c6ed504a06)
+<div align="center">
+  <figure>
+    <figcaption><b>Figura 6:</b> Componentes da placa danificados após a falha em cascata.</figcaption>
+    <img src="https://github.com/user-attachments/assets/5386ec0f-fda0-4a60-a652-c8c6ed504a06" alt="Componentes queimados" width="500"/>
+  </figure>
+</div>
 
 ## 3. Tabela Resumo dos Problemas
 
@@ -211,16 +240,17 @@ Os testes foram focados na validação sequencial do circuito de controle e na o
 
 ## 4. Conclusão dos Testes
 
-Apesar dos resultados práticos limitados, os testes permitiram validar a lógica fundamental do circuito e identificar com precisão uma cadeia de falhas. O aprendizado principal aponta para a necessidade da **substituição do driver pelo modelo correto (UCC27425)** e o **reparo ou reconstrução da bobina secundária** como passos cruciais para a continuidade e sucesso do projeto.
+Apesar dos resultados práticos limitados, os testes permitiram validar a lógica fundamental do circuito e identificar com precisão a cadeia de falhas. O aprendizado principal aponta para a necessidade da **substituição do driver pelo modelo correto (UCC27425)** e o **reparo ou reconstrução da bobina secundária** como passos cruciais para a continuidade e sucesso do projeto.
 
+<div align="center">
+  <figure>
+    <figcaption><b>Vídeo 1:</b> Demonstração da bobina em funcionamento em baixa potência, antes da falha final.</figcaption>
 
 https://github.com/user-attachments/assets/8da18443-600b-4ca2-9458-0d70e077268a
 
+  </figure>
+</div>
 
-
-### Sugestões para trabalhos futuros
-
-[Apresente suas sugestões de trabalhos futuros.]
 ## 5. Sugestões de Trabalhos Futuros
 
 Com base nos resultados e aprendizados obtidos, são propostos os seguintes trabalhos futuros para a correção, melhoria e evolução do projeto.
